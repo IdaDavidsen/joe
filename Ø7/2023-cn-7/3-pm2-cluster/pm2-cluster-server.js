@@ -1,9 +1,9 @@
-const express = require('express');
-const responseTime = require('response-time')
+const express = require("express");
+const responseTime = require("response-time");
 
 const app = express();
 
-app.use(responseTime())
+app.use(responseTime());
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -23,9 +23,8 @@ app.get("/api/:n", function (req, res) {
 });
 
 const server = app.listen(7000, () => {
-    console.log('Listening on port %d', server.address().port)
-})
-
+  console.log("Listening on port %d", server.address().port);
+});
 
 // pm2
 // to enable the cluster mode, just pass the -i option
@@ -38,7 +37,6 @@ const server = app.listen(7000, () => {
 // pm2 list
 // pm2 show pm2-cluster-server
 
-
 // curl requests
 // link: https://curl.se/docs/manual.html
 // Udregningen af tallet påvirker responstiden
@@ -46,7 +44,6 @@ const server = app.listen(7000, () => {
 // curl http://localhost:7000/api/500000
 // curl -v http://localhost:7000/api/50000000
 // curl -i http://localhost:7000/api/50000000
-
 
 // loadtest
 // npm install -g loadtest
