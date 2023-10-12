@@ -10,7 +10,7 @@ const http = require("http").Server(app);
 const io = require("socket.io")(http); // pakken vi bruger for at få det til at ske
 
 const chatLog = require("./db/chat.js");
-
+// test
 // Middlewares
 
 app.use(cors());
