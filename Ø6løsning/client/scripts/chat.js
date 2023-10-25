@@ -44,7 +44,6 @@ socket.on("chat message", (msg) => {
 });
 
 // Hent chatbeskeder:
-
 function seChat() {
   axios
     .get("http://localhost:3000/store/chat")
@@ -56,7 +55,6 @@ function seChat() {
       console.log(error);
     });
 }
-
 // Server besked
 
 function serverBesked() {
