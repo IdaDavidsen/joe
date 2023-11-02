@@ -13,8 +13,6 @@ function loginUser() {
     .post("http://localhost:3000/login", user)
     .then(async function (response) {
       console.log(response.data);
-      if(response.data == "Login successful") {
-        
       responseDOM.innerHTML = response.data;
     })
     .catch(function (error) {
