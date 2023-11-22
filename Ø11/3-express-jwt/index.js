@@ -5,7 +5,7 @@ const sqlite3 = require("sqlite3").verbose();
 const app = express();
 const port = 3000;
 const secret_key = "secret_key";
-const salt_rounds = 10;
+const salt_rounds = 10; // øger sikkerheden ved at hashe passwords 10 gange
 
 // JSON Web Token er en måde at autentificere brugere på
 // Denne token bliver sendt med i alle requests til serveren
@@ -64,6 +64,8 @@ const getUserByUsername = (userName) => {
 };
 
 // Middleware for at checke JWT token på protected routes
+// tjekker om der er sendt en token med i requesten og om den er rigtig.
+// hvis den er rigtig, sendes den retur
 const authenticateToken = (req, res, next) => {
   const token = req.headers.authorization;
 

@@ -1,4 +1,4 @@
-const crypto = require('crypto');
+const crypto = require("crypto");
 
 // Hash Algorithms
 // MD5: 'md5'
@@ -7,10 +7,10 @@ const crypto = require('crypto');
 // SHA-512: 'sha512'
 
 // Hashing
-const hash = crypto.createHash('sha256');
-const data = 'Hello, World!';
-const hashedData = hash.update(data, 'utf-8').digest('hex');
+const hash = crypto.createHash("sha256");
+const data = "minHundHedderTorben10";
+const hashedData = hash.update(data, "utf-8").digest("hex");
 
 // Print
-console.log('Data:', data);
-console.log('Hashed Data:', hashedData);
+console.log("Data:", data);
+console.log("Hashed Data:", hashedData);
